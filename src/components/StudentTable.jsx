@@ -1,40 +1,34 @@
-import StudentRow from './StudentRow';
-import './StudentTable.css';
+import StudentRow from "./StudentRow";
 
-function StudentTable({ students, onUpdateScore }) {
+function StudentTable({ students, updateScore }) {
   return (
-    <section className="table-section">
-      <h2 className="section-title">Student Records</h2>
-      <div className="table-wrapper">
-        <table className="student-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Student Name</th>
-              <th>Score</th>
-              <th>Status</th>
-              <th>Update Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            {students.length === 0 ? (
-              <tr>
-                <td colSpan="5" className="empty-msg">No students found. Add one below!</td>
-              </tr>
-            ) : (
-              students.map((student, index) => (
-                <StudentRow
-                  key={student.id}
-                  index={index + 1}
-                  student={student}
-                  onUpdateScore={onUpdateScore}
-                />
-              ))
-            )}
-          </tbody>
-        </table>
+    <div className="records-box">
+      <div className="records-title">
+        <h3>STUDENT RECORDS</h3>
+        <p>{students.length} entries</p>
       </div>
-    </section>
+
+      <table>
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>SCORE</th>
+            <th>STATUS</th>
+            <th>UPDATE</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {students.map((student) => (
+            <StudentRow
+              key={student.id}
+              student={student}
+              updateScore={updateScore}
+            />
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
