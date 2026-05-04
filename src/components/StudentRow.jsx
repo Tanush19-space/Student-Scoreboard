@@ -27,3 +27,14 @@ function StudentRow({ student, updateScore }) {
 }
 
 export default StudentRow;
+
+
+
+
+
+
+
+
+
+
+

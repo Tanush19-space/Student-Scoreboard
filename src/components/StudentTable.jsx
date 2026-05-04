@@ -33,3 +33,17 @@ function StudentTable({ students, updateScore }) {
 }
 
 export default StudentTable;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
