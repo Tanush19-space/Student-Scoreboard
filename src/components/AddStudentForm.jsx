@@ -146,24 +146,3 @@ export default AddStudentForm;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
