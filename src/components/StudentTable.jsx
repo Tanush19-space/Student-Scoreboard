@@ -78,26 +78,3 @@ export default StudentTable;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
